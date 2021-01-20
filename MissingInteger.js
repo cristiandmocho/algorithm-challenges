@@ -5,13 +5,13 @@ function solution(A) {
   // Making sure we don't have any duplicates
   const mySet = new Set(A);
 
-  // Making sure we have an ordered array
-  let myArray = [...mySet].sort((a, b) => a - b);
-
   // Making sure we don't have any numbers bellow 1 in the array
   myArray = myArray.filter((n) => n > 0);
 
-  // Treating special cases:
+  // Making sure we have an ordered array
+  let myArray = [...mySet].sort((a, b) => a - b);
+
+    // Treating special cases:
   // 1. If now array is empty, return 1
   if (myArray.length === 0) return { myArray, result: 1 }; // FIXME: This is just for debugging purposes!
   //                                                                 The correct return should be just the integer!
